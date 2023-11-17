@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+
+    <script src="https://kit.fontawesome.com/a42570f4e1.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+
+    <title>LOGIN PATIENTS</title>
+     <style>
+    *{
+    padding:0px;
+    margin:0px;
+    box:border-box;
+    }
+    body{
+    background:#f0f5f5;
+    }
+    h4{
+    color:crimson;
+    text-align:center;
+    }
+    .fa-solid{
+    color:green;
+    }
+    .btn{
+    height:40px;
+    width:640px;
+    color:pink;
+    }
+     a{
+    text-decoration:none;
+    font-size:20px;
+    color:crimson;
+    }
+    img{
+    margin-left:790px;
+    height:400px;
+    width:400px;
+    margin-top:-170px;
+    border-radius:100%;
+    }
+    </style>
+
+</head>
+<body>
+ <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <form method="post">{% csrf_token %}
+                    <h4>LOGIN HERE</h4>
+                        <div class="input-group mb-3">
+                          <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-user"></i></span>
+                          <input type="text" name="uname" class="form-control" placeholder="Username" aria-label="firstname" aria-describedby="basic-addon1">
+                        </div>
+
+                        <div class="input-group mb-3">
+                          <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-lock"></i></span>
+                          <input type="password" name="passw" class="form-control" placeholder="***************" aria-label="dimage" aria-describedby="basic-addon1">
+                        </div>
+
+                    <button type="submit" class="btn btn-primary"><b>LOGIN</b></button>
+                </form>
+                 <a href="http://127.0.0.1:8000/mgmt_app/patientregview/"><b>Dont't Have an Account?Sign Up</b></a>
+
+                <img src="{% static 'onlinedoctor3.jpg' %}">
+
+                </div>
+            </div>
+
+</div>
+
+</body>
+</html>

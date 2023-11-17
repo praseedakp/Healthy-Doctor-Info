@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/a42570f4e1.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>edit patient data</title>
+<style>
+    *{
+    padding:0px;
+    margin:0px;
+    box:border-box;
+    }
+    body{
+    background:#f0f5f5;
+    }
+    h4{
+    color:crimson;
+    text-align:center;
+    }
+    .fa-solid{
+    color:green;
+    }
+    .btn{
+    height:40px;
+    width:640px;
+    color:#990000;
+    }
+    a{
+    text-decoration:none;
+    font-size:20px;
+    color:crimson;
+    }
+
+    </style>
+
+</head>
+<body>
+ <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <form method="post">{% csrf_token %}
+                    <h4>UPDATE YOUR INFORMATIONS</h4>
+                        <div class="input-group mb-3">
+                          <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-user"></i></span>
+                          <input type="text" name="fname" class="form-control" value="{{a.fname}}" aria-label="firstname" aria-describedby="basic-addon1">
+                        </div>
+
+                         <div class="input-group mb-3">
+                          <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-user"></i></span>
+                          <input type="text" name="lname" class="form-control" value="{{a.lname}}" aria-label="lastname" aria-describedby="basic-addon1">
+                        </div>
+
+                         <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-envelope"></i></span>
+                            <input type="email" name="email" class="form-control" placeholder="email" value="{{a.email}}" aria-label="email" aria-describedby="basic-addon1">
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-phone"></i></span>
+                            <input type="number" name="phone" class="form-control" placeholder="Phone" value="{{a.phone}}" aria-label="phone" aria-describedby="basic-addon1">
+                        </div>
+
+                         <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-location-dot"></i></span>
+                            <input type="text" name="address" class="form-control" placeholder="address" value="{{a.address}}" aria-label="address" aria-describedby="basic-addon1">
+                        </div>
+
+
+                         <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-location-dot"></i></span>
+                            <input type="text" name="place" class="form-control" placeholder="Place"  value="{{a.place}}" aria-label="place" aria-describedby="basic-addon1">
+                        </div>
+
+
+                         <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-user"></i></span>
+                            <input type="text" name="uname" class="form-control" placeholder="uname"  value="{{a.uname}}" aria-label="address" aria-describedby="basic-addon1">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary"><b>Update</b></button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+</body>
+</html>

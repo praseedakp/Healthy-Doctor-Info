@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/a42570f4e1.js" crossorigin="anonymous"></script>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Display doctors for patients</title>
+    <style>
+         *{
+    padding:0px;
+    margin:0px;
+    box:border-box;
+    }
+    body{
+    background:#f0f5f5;
+    }
+    img{
+    height:160px;
+    width:100px;
+    border-radius:100%;
+    }
+    p{
+    margin-top:-10px;
+    text-align:center;
+    }
+    .card{
+    border:2px solid lightgrey;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    }
+    .btn{
+    height:40px;
+    width:270px;
+    }
+    h1{
+    color:red;
+    text-align:center;
+    font-family:cursive;
+    background-color:#ace600;
+    }
+    .fa-solid,.fa-regular{
+    color:#ace600;
+    }
+    h5{
+    color:#cc0000;
+    }
+    .btn{
+    background:#86b300;
+    }
+
+
+    </style>
+</head>
+<body>
+<h1>OUR DOCTORS</h1>
+<div class="container mt-5">
+  <div class="row">
+    {% for i,j,k,l,o,p,q,r,s,t in ct %}
+    <div class="col">
+        <div class="card" style="width:300px;height:520px;">
+  <img src="{% static k %}" class="card-img-top">
+  <div class="card-body">
+    <h5 class="card-title">Dr.{{j}}</h5>
+      <p class="card-text"><i class="fa-regular fa-envelope"></i> {{l}}</p>
+
+       <p class="card-text"><i class="fa-solid fa-phone"></i>{{o}}</p>
+       <p class="card-text"><i class="fa-solid fa-graduation-cap"></i> {{p}}</p>
+       <p class="card-text"><i class="fa-solid fa-user-doctor"></i> {{q}}</p>
+       <p class="card-text">{{r}}</p>
+       <p class="card-text"><i class="fa-solid fa-location-dot"></i> {{s}}</p>
+       <p class="card-text"><i class="fa-solid fa-location-dot"></i> {{t}}</p>
+    <a href="http://127.0.0.1:8000/mgmt_app/singleforpatients/{{i}}" class="btn btn-warning"><b>More</b></a>
+  </div>
+</div>
+
+     </div>
+    {% endfor %}
+  </div>
+
+
+</div>
+
+</body>
+</html>

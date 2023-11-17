@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/a42570f4e1.js" crossorigin="anonymous"></script>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Display Live doctors</title>
+    <style>
+         *{
+    padding:0px;
+    margin:0px;
+    box:border-box;
+    }
+     body{
+    background:#f0f5f5;
+    }
+    h1{
+    text-align:center;
+    color:red;
+    background-color:#e6ffff;
+    }
+    .one{
+    border:2px solid dimgrey;
+    width:100%;
+    }
+    th{
+    color:#cc0066;
+    }
+
+    td,th{
+    border:2px solid lightgrey;
+    text-align:center;
+    font-size:17px;
+
+
+    }
+    .fa-solid{
+    color:red;
+    }
+    .fa-regular{
+    color:crimson;
+    }
+
+    </style>
+</head>
+<body>
+<h1>OUR DAILY LIVE SYSTEM</h1>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-12">
+
+  <table class="one">
+    <tr>
+      <th>Sl.no</th>
+       <th>Name</th>
+       <th>Photos</th>
+       <th>Email</th>
+       <th>Phone</th>
+       <th>Qualification</th>
+       <th>Specialization</th>
+       <th>About</th>
+      <th>State</th>
+      <th>Address</th>
+        <th>Action</th>
+
+    </tr>
+    {% for i,j,k,l,m,p,q,r,s,t in li %}
+    <tr>
+      <td>{{i}}</td>
+       <td>Dr.{{j}}</td>
+       <td><img src="{% static k %}" height="100px" width="100px"></td>
+       <td>{{l}}</td>
+      <td>{{m}}</td>
+      <td>{{p}}</td>
+      <td>{{q}}</td>
+      <td>{{r}}</td>
+      <td>{{s}}</td>
+      <td>{{t}}</td>
+        <td><a href="http://127.0.0.1:8000/mgmt_app/answersquestions/" class="btn btn-success">Add Replay</a></td>
+    </tr>
+    {% endfor %}
+  </table>
+
+     </div>
+  </div>
+
+</div>
+
+</body>
+</html>

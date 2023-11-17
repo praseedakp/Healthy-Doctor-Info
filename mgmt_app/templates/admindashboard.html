@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Admin dashboard</title>
+    <style>
+        *{
+    padding:0px;
+    margin:0px;
+    box:border-box;
+    }
+    body{
+    background:#d1d1e0;
+
+    }
+    a{
+    text-decoration:none;
+    color:#00b3b3;
+    font-size:20px;
+    }
+    img{
+    height:90px;
+    width:90px;
+    border:2px solid white;
+    border-radius:100%;
+    }
+    .navbar{
+    background-color: #D9AFD9;
+background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+
+
+    }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="{% static 'health3.jpg' %}"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/mgmt_app/admindashboard/" style="color:red"><b>Home</b></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://127.0.0.1:8000/mgmt_app/aboutus/" style="color:red"><b>About Us</b></a>
+        </li>
+
+         <li class="nav-item">
+          <a class="nav-link" href="http://127.0.0.1:8000/mgmt_app/contactus/" style="color:red;"><b>Contact Us</b></a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="http://127.0.0.1:8000/mgmt_app/commentsdisplayadmin/" style="color:red;"><b>More Info</b></a>
+        </li>
+
+          <li class="nav-item">
+          <a class="nav-link" href="http://127.0.0.1:8000/mgmt_app/index/" style="margin-left:790px;color:red;"><b>Logout</b></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+    <div class="d-grid gap-2 col-6 mx-auto mt-3">
+  <button class="btn btn-dark" type="button"><a href="http://127.0.0.1:8000/mgmt_app/doctorregistration/"><b>UPLOAD DOCTORS</b></a></button>
+  <button class="btn btn-light" type="button"><a href="http://127.0.0.1:8000/mgmt_app/displaydoctors/"><b>VIEW DOCTORS</b></a></button>
+  <button class="btn btn-dark" type="button"><a href="http://127.0.0.1:8000/mgmt_app/diseasesupload/"><b>UPLOAD DISEASES</b></a></button>
+  <button class="btn btn-light" type="button"><a href="http://127.0.0.1:8000/mgmt_app/displaynewdisease/"><b>VIEW DISEASES</b></a></button>
+  <button class="btn btn-dark" type="button"><a href="http://127.0.0.1:8000/mgmt_app/displaylivedoctors/"><b>DOCTOR LIVE INFORMATION</b></a></button>
+  <button class="btn btn-light" type="button"><a href="http://127.0.0.1:8000/mgmt_app/dispquesadmin/"><b>VIEW QUERIES</b></a></button>
+
+  <button class="btn btn-dark" type="button"><a href="http://127.0.0.1:8000/mgmt_app/answersquestions/"><b>UPLOAD ANSWERS</b></a></button>
+   <button class="btn btn-light" type="button"><a href="http://127.0.0.1:8000/mgmt_app/dispanswersadmin/"><b>VIEW ANSWERS</b></a></button>
+        <button class="btn btn-dark" type="button"><a href="http://127.0.0.1:8000/mgmt_app/uploadhospital/"><b>UPLOAD HOSPITALS</b></a></button>
+
+            <button class="btn btn-light" type="button"><a href="http://127.0.0.1:8000/mgmt_app/displayhospital/"><b>VIEW HOSPITALS</b></a></button>
+
+
+
+
+</div>
+
+</div>
+
+</body>
+</html>

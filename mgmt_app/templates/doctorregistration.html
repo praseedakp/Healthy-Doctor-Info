@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/a42570f4e1.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Register Doctors</title>
+     <style>
+    *{
+    padding:0px;
+    margin:0px;
+    box:border-box;
+    }
+    body{
+    background:#f0f5f5;
+    }
+    h4{
+    color:red;
+    text-align:center;
+    }
+    .fa-regular,.fa-solid{
+    color:green;
+    }
+    .btn{
+    height:40px;
+    width:640px;
+    color:#800040;
+    background:#009999;
+
+    }
+    </style>
+
+</head>
+<body>
+ <div class="container mt-3">
+        <div class="row">
+            <div class="col-md-6">
+                <form method="post" enctype="multipart/form-data">{% csrf_token %}
+                    <h4>DOCTORS REGISTRATION</h4>
+                        <div class="input-group mb-3">
+                          <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-user-doctor"></i></span>
+                          <input type="text" name="fname" class="form-control" placeholder="First Name" aria-label="firstname" aria-describedby="basic-addon1">
+                        </div>
+
+                        <div class="input-group mb-3">
+                          <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-image"></i></span>
+                          <input type="file" name="dimage" class="form-control" placeholder="Upload" aria-label="dimage" aria-describedby="basic-addon1">
+                        </div>
+
+                         <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa-regular fa-envelope"></i></span>
+                            <input type="email" name="email" class="form-control" placeholder="Email" aria-label="email" aria-describedby="basic-addon1">
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-phone"></i></span>
+                            <input type="number" name="phone" class="form-control" placeholder="Phone" aria-label="phone" aria-describedby="basic-addon1">
+                        </div>
+
+                        <div>
+                            <input type="radio" name="gender" value="male">male
+                            <input type="radio" name="gender" value="female">female
+                            <input type="radio" name="gender" value="others">others
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-calendar-days"></i></span>
+                            <input type="date" name="date" class="form-control" placeholder="Dob" aria-label="date" aria-describedby="basic-addon1">
+                        </div>
+
+                      <div class="input-group mb-3">
+                            <select class="form-select" name="select" aria-label="Default select example">
+                                <option selected>Qualification</option>
+                                <option value="MBBS">MBBS</option>
+                                <option value="MD">MD</option>
+                                <option value="MS">MS</option>
+                                <option value="BAMS">BAMS</option>
+                                <option value="BHMS">BHMS</option>
+                            </select>
+                        </div>
+
+                         <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-user-doctor"></i></span>
+                            <input type="text" name="specialization" class="form-control" placeholder="Specialization" aria-label="Specialization" aria-describedby="basic-addon1">
+                        </div>
+
+
+                         <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-user-doctor"></i></span>
+                            <input type="text" name="about" class="form-control" placeholder="About" aria-label="about" aria-describedby="basic-addon1">
+                        </div>
+
+
+                         <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-location-dot"></i></span>
+                            <input type="text" name="state" class="form-control" placeholder="State" aria-label="state" aria-describedby="basic-addon1">
+                        </div>
+
+                         <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-location-dot"></i></span>
+                            <input type="text" name="address" class="form-control" placeholder="Address" aria-label="address" aria-describedby="basic-addon1">
+                        </div>
+
+                        <button type="submit" class="btn"><b>REGISTER</b></button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+</body>
+</html>

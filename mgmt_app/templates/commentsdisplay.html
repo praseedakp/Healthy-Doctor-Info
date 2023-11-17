@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <script src="https://kit.fontawesome.com/a42570f4e1.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>display for patients comments</title>
+  <style>
+     *{
+    padding:0px;
+    margin:0px;
+    box:border-box;
+    }
+     body{
+    background:#f0f5f5;
+    }
+    .card{
+    background:#e6ecff;
+    border:2px solid lightgrey;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    p{
+    text-align:center;
+    }
+    .btn{
+    width:120px;
+    }
+     .fa-regular,.fa-solid{
+    color:#0000b3;
+    }
+    h2{
+    text-align:center;
+    color:red;
+    background-color:white;
+    }
+  </style>
+
+</head>
+<body>
+<h2>YOUR COMMENTS ARE HERE</h2>
+<div>
+    <a href="http://127.0.0.1:8000/mgmt_app/patientprofile/"><i class="fa-solid fa-arrow-left fa-2x" style="color:red;margin-left:30px;"></i></a>
+</div>
+<div class="container mt-5">
+  <div class="row">
+    {% for i in d %}
+
+    <div class="col">
+
+      <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"><i class="fa-solid fa-user"></i> {{i.cname}}</h5>
+    <p class="card-text"><i class="fa-regular fa-comment"></i> {{i.comment}}</p>
+
+   <a href="http://127.0.0.1:8000/mgmt_app/editcomments/{{i.id}}" class="btn btn-success"><b>Edit</b></a>
+     <a href="http://127.0.0.1:8000/mgmt_app/deletecomments/{{i.id}}" class="btn btn-danger"><b>Delete</b></a>
+  </div>
+</div>
+    </div>
+    {% endfor %}
+  </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/a42570f4e1.js" crossorigin="anonymous"></script>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Display registered doctors</title>
+    <style>
+         *{
+    padding:0px;
+    margin:0px;
+    box:border-box;
+    }
+    body{
+    background:#f0f5f5;
+    }
+    .one{
+    border:2px solid #e0ebeb;
+    width:100%;
+    }
+    th{
+    color:green;
+    }
+
+    td,th{
+    border:2px solid  #e0ebeb;
+    text-align:center;
+    font-size:17px;
+    }
+    h2{
+    color:red;
+    text-align:center;
+    background-color:white;
+    }
+
+    </style>
+</head>
+<body>
+<h2>DOCTORS INFORMATIONS</h2>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-12">
+
+  <table class="one">
+    <tr>
+      <th>Sl.no</th>
+       <th>Name</th>
+       <th>Photos</th>
+       <th>Email</th>
+       <th>Phone</th>
+       <th>Gender</th>
+       <th>Dob</th>
+       <th>Qualification</th>
+       <th>Specialization</th>
+       <th>About</th>
+      <th>State</th>
+      <th>Address</th>
+        <th>Actions</th>
+    </tr>
+    {% for i,j,k,l,m,n,o,p,q,r,s,t in dt %}
+    <tr>
+      <td>{{i}}</td>
+       <td>Dr.{{j}}</td>
+       <td><img src="{% static k %}" height="100px" width="100px"></td>
+       <td>{{l}}</td>
+      <td>{{m}}</td>
+      <td>{{n}}</td>
+      <td>{{o}}</td>
+      <td>{{p}}</td>
+      <td>{{q}}</td>
+      <td>{{r}}</td>
+      <td>{{s}}</td>
+      <td>{{t}}</td>
+        <td><a href="http://127.0.0.1:8000/mgmt_app/detailsview/{{i}}" class="btn btn-primary">Details</a></td>
+        <td><a href="http://127.0.0.1:8000/mgmt_app/deletedetails/{{i}}" class="btn btn-danger">Delete</a></td>
+         <td><a href="http://127.0.0.1:8000/mgmt_app/editdetails/{{i}}" class="btn btn-success">Edit</a></td>
+
+
+    </tr>
+    {% endfor %}
+  </table>
+
+     </div>
+  </div>
+
+</div>
+
+</body>
+</html>
